@@ -1,14 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#192a56", // This is an orange looking color
+    },
+    secondary: {
+      main: "#7f8fa6", //Another orange-ish color
+    },
+  },
+});
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
