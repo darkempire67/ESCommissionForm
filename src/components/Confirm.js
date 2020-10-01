@@ -52,6 +52,8 @@ export class Confirm extends Component {
       method: "POST",
       body: JSON.stringify(this.props.values),
     });
+    //after go to submitted
+    this.props.nextStep();
   };
   back = (e) => {
     e.preventDefault();

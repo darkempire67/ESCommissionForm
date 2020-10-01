@@ -10,6 +10,7 @@ import FormTypeOfLoan from "./FormTypeOfLoan";
 import FormAdditionalCharges from "./FormAdditionalCharges";
 import FormLoanOfficerInfo from "./FormLoanOfficerInfo";
 import StepContent from "@material-ui/core/StepContent";
+import Submitted from "./Submitted";
 
 export class UserForm extends Component {
   constructor(props) {
@@ -443,6 +444,12 @@ export class UserForm extends Component {
               updatePayment={this.updatePayment}
               updatePayment2={this.updatePayment2}
             />
+          </React.Fragment>
+        );
+      case 6:
+        return (
+          <React.Fragment>
+            <Submitted />
           </React.Fragment>
         );
       default:
