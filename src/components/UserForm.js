@@ -15,43 +15,37 @@ export class UserForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      step: 5,
+      step: 0,
       //step 1
-      firstName: "Esteni",
-      lastName: "M",
-      email: "esteni@equitysmartloans.com",
+      firstName: "",
+      lastName: "",
+      email: "",
       companyBranch: "",
       //step 2
-      loanNumber: "1234",
-      escrowNumber: "222",
-      loanAmount: 10000,
+      loanNumber: "",
+      escrowNumber: "",
+      loanAmount: null,
       fundedDate: null,
-      processor: "GAby",
-      escrowCompany: "Escrow Company",
-      lenderName: "Some Lender Company",
-      borrowers: "Borrower Comp",
-      propertyAddress: "148999 dst los angles ca 90011",
-      amountCheck: 20000,
+      processor: "",
+      escrowCompany: "",
+      lenderName: "",
+      borrowers: "",
+      propertyAddress: "",
+      amountCheck: null,
       AmountOfCheckWired: false, // this wired is for amount OF CHECK
       //----step 3
-      typeOfLoan: "VA",
-      transaction: "Purchase",
+      typeOfLoan: "",
+      transaction: "",
       correspondent: false,
-      correspondentCompany: "SOme Corr Comp",
-      state: "CA",
+      correspondentCompany: "",
+      state: "",
       //step 4
-      additionalCharge: [
-        {
-          itemName: "item1",
-          amount: 500,
-          id: new Date(),
-        },
-      ],
+      additionalCharge: [],
       // step 5
       loanOfficer: "",
       flatFeeOrPercent: "percent",
       flatFee: null,
-      businessName: "Some Business Name",
+      businessName: "",
       percent: null,
       paymentTypeWired: false,
       paymentAmount: "",
