@@ -47,7 +47,7 @@ export class Confirm extends Component {
     // process data
     //this.props.nextStep();
 
-    console.log(process.env);
+    //console.log(process.env);
     fetch(process.env.REACT_APP_ZAPIER_URL, {
       method: "POST",
       body: JSON.stringify(this.props.values),
