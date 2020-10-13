@@ -38,16 +38,17 @@ import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
 import { makeStyles } from "@material-ui/core/styles";
-
+import axios from "axios";
 export class Confirm extends Component {
   state = { text: "" };
-
   continue = (e) => {
     e.preventDefault();
     // process data
+    add2DB(this.props.values);
     //this.props.nextStep();
 
     //console.log(process.env);
+
     fetch(process.env.REACT_APP_ZAPIER_URL, {
       method: "POST",
       body: JSON.stringify(this.props.values),
@@ -442,5 +443,18 @@ export class Confirm extends Component {
     );
   }
 }
-
+async function add2DB(values) {
+  const config = {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    },
+  };
+  try {
+    const res = await axios.post(process.env.REACT_APP_DB_CONN, values, config);
+    console.log(res.data.data);
+  } catch (err) {
+    console.log("error=" + err);
+  }
+}
 export default Confirm;
