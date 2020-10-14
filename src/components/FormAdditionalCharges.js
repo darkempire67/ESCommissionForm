@@ -46,7 +46,7 @@ export class FormAdditionalCharges extends Component {
       amountError: "",
       itemNameError: "",
     };
-    var numbers = /^[0-9]+$/;
+    var numbers = /[-+]?[0-9]*\.?[0-9]+/;
     if (this.state.itemName === "") {
       isErr = true;
       errors.itemNameError = "Cannot be Empty";

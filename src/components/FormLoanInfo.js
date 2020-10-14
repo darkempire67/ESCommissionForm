@@ -60,7 +60,7 @@ export class FormLoanInfo extends Component {
       propertyAddressError: "",
       amountCheckError: "",
     };
-    var numbers = /^[0-9]+$/;
+    var numbers = /[-+]?[0-9]*\.?[0-9]+/;
     if (this.props.values.loanNumber === "") {
       isErr = true;
       errors.loanNumberError = "Provide Loan Number";
