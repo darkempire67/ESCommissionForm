@@ -39,6 +39,7 @@ import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
 import { makeStyles } from "@material-ui/core/styles";
 import axios from "axios";
+
 export class Confirm extends Component {
   state = { text: "" };
   continue = (e) => {
@@ -446,7 +447,7 @@ export class Confirm extends Component {
 async function add2DB(values) {
   const config = {
     headers: {
-      //"Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
     },
   };
