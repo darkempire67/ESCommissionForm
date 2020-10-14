@@ -446,7 +446,7 @@ export class Confirm extends Component {
 async function add2DB(values) {
   const config = {
     headers: {
-      "Access-Control-Allow-Origin": "*",
+      //"Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
     },
   };
