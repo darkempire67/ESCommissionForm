@@ -453,7 +453,7 @@ async function add2DB(values) {
   };
   try {
     const res = await axios.post(process.env.REACT_APP_DB_CONN, values, config);
-    console.log(res.data.data);
+    console.log(res.data);
   } catch (err) {
     console.log("error=" + err);
   }
