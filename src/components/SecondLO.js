@@ -19,6 +19,7 @@ import RaisedButton from "material-ui/RaisedButton";
 import DateFnsUtils from "@date-io/date-fns";
 import FormLabel from "@material-ui/core/FormLabel";
 import Divider from "@material-ui/core/Divider";
+import { numberWithCommas } from "../utils/utils";
 
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -235,7 +236,7 @@ export class SecondLO extends Component {
             <List component='nav'>
               <ListItemText
                 primary={"Payment Amount"}
-                secondary={values.paymentAmount2}
+                secondary={numberWithCommas(values.paymentAmount2)}
               />
             </List>
           </Grid>

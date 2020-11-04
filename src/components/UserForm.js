@@ -25,14 +25,14 @@ export class UserForm extends Component {
       //step 2
       loanNumber: "",
       escrowNumber: "",
-      loanAmount: null,
+      loanAmount: 0,
       fundedDate: null,
       processor: "",
       escrowCompany: "",
       lenderName: "",
       borrowers: "",
       propertyAddress: "",
-      amountCheck: null,
+      amountCheck: 0,
       AmountOfCheckWired: false, // this wired is for amount OF CHECK
       //----step 3
       typeOfLoan: "",
@@ -49,7 +49,7 @@ export class UserForm extends Component {
       businessName: "",
       percent: null,
       paymentTypeWired: false,
-      paymentAmount: "",
+      paymentAmount: 0,
 
       // LO2
       loanOfficer2: "",
@@ -58,7 +58,7 @@ export class UserForm extends Component {
       businessName2: "",
       percent2: null,
       paymentTypeWired2: true,
-      paymentAmount2: "",
+      paymentAmount2: 0,
       twoLOs: false,
 
       // second payment temp var---> this is to not lose the original value of

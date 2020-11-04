@@ -31,6 +31,7 @@ import {
   KeyboardTimePicker,
   KeyboardDatePicker,
 } from "@material-ui/pickers";
+import { numberWithCommas } from "../utils/utils";
 
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
@@ -164,7 +165,7 @@ export class Confirm extends Component {
             <List component='nav'>
               <ListItemText
                 primary={"Payment Amount"}
-                secondary={values.paymentAmount2}
+                secondary={numberWithCommas(values.paymentAmount2)}
               />
             </List>
           </Grid>

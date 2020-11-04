@@ -20,6 +20,7 @@ import DateFnsUtils from "@date-io/date-fns";
 import Tooltip from "@material-ui/core/Tooltip";
 import { InputAdornment } from "@material-ui/core";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
+import { numberWithCommas } from "../utils/utils";
 
 import {
   MuiPickersUtilsProvider,
@@ -234,6 +235,12 @@ export class FormLoanInfo extends Component {
                 />
               </FormControl>
             )}
+            <Typography component='h5' variant='h6' align='center'>
+              $
+              {values.loanAmount === null
+                ? 0
+                : numberWithCommas(values.loanAmount)}
+            </Typography>
           </Grid>
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <Grid item xs={12} md={6}>
@@ -453,6 +460,12 @@ export class FormLoanInfo extends Component {
                 </FormControl>
               )}
             </Tooltip>
+            <Typography component='h5' variant='h6' align='center'>
+              $
+              {values.amountCheck === null
+                ? 0
+                : numberWithCommas(values.amountCheck)}
+            </Typography>
           </Grid>
 
           {/*butoons--------------------*/}

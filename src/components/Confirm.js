@@ -27,6 +27,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
+import { numberWithCommas } from "../utils/utils";
 
 import {
   MuiPickersUtilsProvider,
@@ -168,7 +169,7 @@ export class Confirm extends Component {
             <List component='nav'>
               <ListItemText
                 primary={"Loan Amount"}
-                secondary={values.loanAmount}
+                secondary={numberWithCommas(values.loanAmount)}
               />
             </List>
           </Grid>
@@ -224,7 +225,7 @@ export class Confirm extends Component {
             <List component='nav'>
               <ListItemText
                 primary={"Amount of Check"}
-                secondary={values.amountCheck}
+                secondary={numberWithCommas(values.amountCheck)}
               />
             </List>
           </Grid>
@@ -370,7 +371,7 @@ export class Confirm extends Component {
             <List component='nav'>
               <ListItemText
                 primary={"Payment Amount"}
-                secondary={values.paymentAmount}
+                secondary={numberWithCommas(values.paymentAmount)}
               />
             </List>
           </Grid>

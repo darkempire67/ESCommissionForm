@@ -24,6 +24,7 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import AccountCircle from "@material-ui/icons/AccountCircle";
+import { numberWithCommas } from "../utils/utils";
 
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -373,7 +374,11 @@ export class FormLoanOfficerInfo extends Component {
             <List component='nav'>
               <ListItemText
                 primary={"Payment Amount"}
-                secondary={values.paymentAmount}
+                secondary={
+                  values.paymentAmount !== null
+                    ? numberWithCommas(values.paymentAmount)
+                    : 0
+                }
               />
             </List>
           </Grid>
